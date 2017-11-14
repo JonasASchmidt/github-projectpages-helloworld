@@ -7,7 +7,7 @@
 </head>
 <body>
 
-   <h1>Hello world!</h1>
+   <h1 class="linear-wipe">Hello world!</h1>
       
     <!-- <div class="clock">
       <div class="clock-face">
@@ -83,9 +83,12 @@
         color: white;
         /* margin: auto; */
         align-self: center;
+        font-family: Arial, Helvetica, sans-serif;
         font-family: 'Shrikhand', cursive;
-        /* font-family: 'Zilla Slab Highlight', cursive;
-        font-weight: bold; */
+        /* font-family: 'Cinzel Decorative', cursive;
+        font-family: 'Nosifer', cursive;
+        font-family: 'Zilla Slab Highlight', cursive; */
+        font-weight: bold;
     }
 
     .clock {
@@ -127,6 +130,52 @@
     .second-hand {
       height:3px;
     }
+
+    .linear-wipe {
+      text-align: center;
+      
+      background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+      background-size: 1800% 1800%;
+
+      -webkit-animation: rainbow 88s ease infinite;
+      -z-animation: rainbow 88s ease infinite;
+      -o-animation: rainbow 88s ease infinite;
+      animation: rainbow 88s ease infinite;
+
+      color: #FFF;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      /* height: 100%; */
+      width: 100%; 
+      left:0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      /* position: absolute; */
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
 
    </style>
 
